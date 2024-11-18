@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+
+.container {  display: grid;
+
+grid-template-columns: 0.4fr 2.2fr 0.4fr;
+
+grid-template-rows: 0.5fr 0.3fr 2.2fr;
+
+gap: 0px 0px;
+
+grid-auto-flow: row;
+
+grid-template-areas:
+
+"topbar topbar topbar"
+
+". . ."
+
+". Food .";
+
+}
+
+
+.Food { 
+
+grid-area: Food; 
+
+background-color:#00FFFF;
+
+}
+body {
+background-color: lightgreen;
+}
+
+
+
+.topbar {  
+
+display: grid;
+
+background-color:green (111, 214, 37);
+
+height: 100px;
+
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+grid-template-rows: 1fr;
+
+gap: 0px 0px;
+
+grid-auto-flow: row;
+
+grid-template-areas:
+
+"logo . home contact search";
+
+grid-area: topbar;
+
+background-color: purple;
+}
+
+
+.logo { grid-area: logo; }
+
+
+.home { grid-area: home; }
+
+
+.contact { grid-area: contact; }
+
+
+.search { grid-area: search; }
+
+
+</style>
+
+<body>
+  <div class="topnav">
+
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+    <div class="container">
+
+        <div class="Food">
+
+          <div id="map" style="width: 100%; height: 600px;"></div>
+
+        </div>
+
+        <div class="topbar">
+
+            
+
+          <div class="logo"><img  width="100px"></div>
+
+          <div></div>
+
+          <div class="home"><h1>Brisbane Sports</h1></div>
+
+          <div class="contact"><h1>number and email</h1></div>
+
+          <div class="search"><h1>SEARCH</h1></div>
+
+        </div>
+
+      </div>
+
+</body>
+<script>
+
+	const map = L.map('map').setView([-27.416625212310116, 153.07146524923567], 13);
+
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+
+	const marker = L.marker([-27.416625212310116, 153.07146524923567]).addTo(map)
+		.bindPopup('<b>adventure extreme sports center</b><br />I am a popup.').openPopup();
+
+
+
+
+</script>
+</html>
+text of the adventure brisbane maps sports:
+brisbane adventure sports indoor center or outdoor is a great place to be. but also to have an amazing time to enjoy life. there are these places so you can also get you health conditions or fitness wise back into to shape. but also so you can wathc your kids enjoy the fun of their lives growing up, but you as well can enjoy this. go to the out door one to enjoy the beaitful peace and queit of nature to relax and have a chill time with boy friend, family, or people you love being with. 

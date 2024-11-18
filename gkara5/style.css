@@ -1,0 +1,74 @@
+
+.topnav {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: #FFE5B4;
+  }
+  
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: #000;
+    text-align: center;
+
+    padding: 20px 50px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .logo {
+    float: left;
+    color: #000;
+    text-align: center;
+    padding: 20px 50px;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 0px 0px;
+  }
+  
+  .mainp {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .bubble {
+    border-style: solid;
+    margin-left: 100px;
+    width: 1000px;
+    margin-right: 100px;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #716140;
+  }
+
+  .bubblegroup {
+    display: flex;
+    justify-content: space-evenly;
+
+  }
+
+  .topnav a:hover {
+
+    background-color: #ddd;
+    color: black;
+  }
+  
+
+  .topnav a.active {
+
+    background-color:#f6cf92;
+    color: black;
+
+  }
+
+body {
+    background-color: beige;
+}
+
+
+
+table {
+  color: #ddd;
+} 

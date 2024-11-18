@@ -1,0 +1,48 @@
+.container {  display: grid;
+    grid-template-columns: 0.4fr 2.2fr 0.4fr;
+    grid-template-rows: 0.5fr 0.3fr 2.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navbar navbar navbar"
+      ". . ."
+      ". map .";
+  }
+  
+  body {
+    background-color: blue;
+  }
+  
+  .navbar {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo . contactus booking timetable account";
+    grid-area: navbar;
+    padding: 30px;
+    background-color: red;
+  }
+  
+  .logo { grid-area: logo; }
+  
+  .contactus { 
+    grid-area: contactus; 
+    margin-top: 12px;
+  }
+  
+  .booking { grid-area: booking; 
+    margin-top: 12px;
+  }
+  
+  .timetable { grid-area: timetable; 
+    margin-top: 12px;
+  }
+  
+  .account { grid-area: account; 
+    margin-top: 12px;
+  }
+  
+  .map { grid-area: map; }
+  

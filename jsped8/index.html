@@ -1,0 +1,57 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+
+
+
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+              <div class="logo">
+                <a href="index.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQMwwegDB0nwamMXmcn4Zre00QtrwHEg3fbg&s" width="20%"></a>
+
+              </div>
+              <div class>
+                <a  href="contactus.html">contactus</a>
+              
+              </div>
+              <div class><a  href="contactus.html"> Booking</a>
+               
+              </div>
+              <div class> <a  href="booking.html">Timetable</a>
+                
+              </div>
+              <div class><a href="account.html"></a>
+              
+              </div>
+            </div>
+            <div class="map">
+              
+<div id="map" style="width: 100%; height: 400px;"></div>
+            </div>
+          </div>
+          <script>
+
+            const map = L.map('map').setView([-27.446884547087787, 153.01938149001552], 13);
+          
+            const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              maxZoom: 19,
+              attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+          
+            const marker = L.marker([-27.46042494572092, 153.02328143055013]).addTo(map)
+              .bindPopup('<b>Tour Guides!</b><br />').openPopup();
+    
+
+          
+          </script>
+    </body>
+    </html>

@@ -1,0 +1,159 @@
+/* General body and font styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e5dcd2;
+}
+
+/* Header / Navigation Bar */
+header {
+    background-color: #a28282;
+    color: rgb(238, 221, 190);
+    padding: 10px 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2, h3 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* About section text */
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Owner Section */
+.owner-section {
+    background-color: #e5dcd2;
+    padding-top: 30px;
+}
+
+.owner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.owner-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f39c12;
+}
+
+.owner-description {
+    max-width: 600px;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+/* Footer Section */
+footer {
+    background-color: #a28282;
+    color: #e4cdb5;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer a {
+    color: #e4cdb5;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .owner-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .owner-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .owner-description {
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .about-content {
+        width: 90%;
+    }
+}

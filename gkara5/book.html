@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topnav">
+        <img class="logo" src="img/image.png" width = "60px">
+        <a href="index.html">Home</a>
+        <a href="Aboutus.html">About us</a>
+        <a href="classes.html">What classes we provide</a>
+        <a class="active" href="book.html"> Book a class</a>
+      </div>
+      <div class="bubble">
+        
+      <div class="bubblegroup">
+        <table>
+        <tr><td><label for="firstname">First Name</label><br>
+        <input type="text" name="firstname" id="firstname"><br><br></td>
+       <td><label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br><br></td>
+        <td><label for="date">Date:</label>
+    <input type="date" id="birthday" name="birthday"></td></tr>
+    <tr><td> Yoga type 
+    <input type="checkbox" id="yoga1" name="Hatha" value="Hatha">
+    <label for="yoga1">Hatha</label>
+    <input type="checkbox" id="yoga2" name="flex" value="Flex">
+    <label for="yoga2">Flex</label>
+    <input type="checkbox" id="yoga3" name="Restorative" value="Restore">
+    <label for="yoga3">Restoritave</label>
+    <input type="checkbox" id="yoga4" name="Power" value="Power">
+    <label for="yoga4">Power</label></td><br><br><td>
+      
+      <form action="index.html">
+      <label for="appt">Select a time:</label>
+      <input type="time" id="appt" name="appt">
+      <button onclick="myfunction()">Sumbit</button>
+    </form></td></tr>
+
+
+
+  </table>
+      <script>
+        window.onscroll = function() {scrollFunction()};
+function myfunction(){alert ("Booking completed");}
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+      </script>
+</body>
+</html>

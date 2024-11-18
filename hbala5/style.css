@@ -1,0 +1,240 @@
+/* General body and font styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e5dcd2;
+}
+
+/* Header / Navigation Bar */
+header {
+    background-color: #a28282;
+    color: rgb(238, 221, 190);
+    padding: 10px 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://www.ifpadvisory.com.au/wp-content/uploads/2022/04/houses-on-street.jpg') no-repeat center center;
+    background-size: cover;
+    color: rgba(0, 0, 0, 0.507);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero .hero-content {
+    position: relative; /* Ensure positioning context for the h2 and p */
+    display: inline-block;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: white; /* White text for better contrast */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white; /* White text for better contrast */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Property Search Section */
+.property-search {
+    background-color: #a28282;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.property-search .search-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.property-search form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.property-search input, 
+.property-search select, 
+.property-search button {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.property-search button {
+    background-color: #6096de;
+    color: #e5c59d;
+    cursor: pointer;
+}
+
+.property-search button:hover {
+    background-color: #b274e6;
+}
+
+/* Map Section */
+.map-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Property Listing Section */
+.property-listing {
+    padding: 20px;
+    background-color:#e5dcd2 ;
+    margin: 40px 0;
+}
+
+.property-listing h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#property-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.property-item {
+    background-color: #e5c59d;
+    border: 1px solid #e5c59d;
+    border-radius: 8px;
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.property-item:hover {
+    transform: translateY(-5px);
+}
+
+.property-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.property-item h4 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.property-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.property-item strong {
+    color: #333;
+}
+
+/* Map Popup Styling */
+.leaflet-popup-content {
+    font-size: 1rem;
+}
+
+.leaflet-popup-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #a28282;
+    color: #e4cdb5;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #e4cdb5;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .property-search form {
+        flex-direction: column;
+    }
+
+    .property-search input,
+    .property-search select,
+    .property-search button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .property-listing #property-results {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .property-item {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .property-item {
+        width: 100%;
+    }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cityscape Realty</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Cityscape Realty</h1>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Your Dream Home Awaits</h2>
+            <p>Explore beautiful properties with Cityscape Realty.</p>
+        </div>
+    </section>
+
+    <section class="property-search">
+        <div class="search-container">
+            <h3>Find Your Perfect Property</h3>
+            <form action="#" method="GET" id="property-form">
+                <input type="text" placeholder="Enter city or neighborhood" name="location" id="location">
+                <select name="type" id="type">
+                    <option value="any">Any</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House</option>
+                    <option value="condo">Condo</option>
+                </select>
+                <input type="number" placeholder="Min Price" name="min_price" id="min-price">
+                <input type="number" placeholder="Max Price" name="max_price" id="max-price">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <h3>Explore Brisbane with Cityscape Realty</h3>
+        <div id="map" style="height: 450px; width: 100%;"></div>
+    </section>
+
+    <section class="property-listing">
+        <h3>Available Properties</h3>
+        <div id="property-results"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cityscape Realty | All rights reserved</p>
+        <p><a href="mailto:cityscaperealty@yahoo.com">Contact Us</a></p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script>
+        var map = L.map('map').setView([-27.4698, 153.0251], 12);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var properties = [
+    { id: 1, type: 'house', location: '123 Queen St, Brisbane QLD', price: 750000, lat: -27.4689, lon: 153.0224, description: 'A beautiful family home with a backyard and modern amenities.', image: 'https://www.realestate.com.au/news-image/w_2500,h_1667/v1728023270/news-lifestyle-content-assets/wp-content/production/metricon-winner.jpeg?_i=AA' },
+    { id: 2, type: 'apartment', location: '456 Riverside Dr, Brisbane QLD', price: 600000, lat: -27.4701, lon: 153.0261, description: 'Spacious 2-bedroom apartment with city views.', image: 'https://archipro.com.au/images/s1/article/building/Form-Apartments-Port-Coogee-by-Stiebel-Eltron-.jpg/eyJlZGl0cyI6W3sidHlwZSI6InpwY2YiLCJvcHRpb25zIjp7ImJveFdpZHRoIjoxOTIwLCJib3hIZWlnaHQiOjE1NTgsImNvdmVyIjp0cnVlLCJ6b29tV2lkdGgiOjIzMTcsInNjcm9sbFBvc1giOjU2LCJzY3JvbGxQb3NZIjozMywiYmFja2dyb3VuZCI6InJnYigxMTUsMTQwLDE5NCkiLCJmaWx0ZXIiOjZ9fSx7InR5cGUiOiJmbGF0dGVuIiwib3B0aW9ucyI6eyJiYWNrZ3JvdW5kIjoiI2ZmZmZmZiJ9fV0sInF1YWxpdHkiOjg3LCJ0b0Zvcm1hdCI6ImpwZyJ9' },
+    { id: 3, type: 'house', location: '789 Oak Ave, Brisbane QLD', price: 850000, lat: -27.4719, lon: 153.0298, description: 'Luxury house with a large pool and garden.', image: 'https://www.novushomes.com.au/sites/default/files/styles/16x9/public/2022-05/Zenith%20Fg%20-%20WEBSITE_0.jpg?itok=Gxc75CYL' },
+    { id: 4, type: 'condo', location: '101 Park Rd, Brisbane QLD', price: 500000, lat: -27.4634, lon: 153.0182, description: 'Cozy condo near public transport and amenities.', image: 'https://cdn.brookfieldresidential.net/-/media/brp/global/modules/news-and-blog/corporate/should-i-buy-a-condo-or-a-house/exterior-view-of-indigo-at-new-haven-by-brookfield-residential-in-ontario-ranch-ca-1189.jpg?rev=48050cb0d2594656bac044b3f1b982cd&cx=0.5&cy=0.5' },
+    { id: 5, type: 'house', location: '202 River View Ln, Brisbane QLD', price: 900000, lat: -27.4740, lon: 153.0350, description: 'Gorgeous family house with river views and a double garage.', image: 'https://res.akamaized.net/domain/image/upload/t_web/v1538713881/bigsmall_Mirvac_house2_twgogv.jpg' }
+];
+
+
+        var markers = [];
+
+        function displayProperties(properties) {
+            markers.forEach(function(marker) {
+                map.removeLayer(marker);
+            });
+            markers = [];
+
+            properties.forEach(function(property) {
+                var marker = L.marker([property.lat, property.lon])
+                    .bindPopup(`
+                        <b>${property.location}</b><br>
+                        <i>Type: ${property.type}</i><br>
+                        <i>Price: $${property.price}</i><br>
+                        <p>${property.description}</p>
+                        <img src="${property.image}" alt="Image of ${property.location}" style="width: 100%; height: auto;">
+                    `)
+                    .addTo(map);
+
+                markers.push(marker);
+            });
+        }
+
+        document.getElementById('property-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var location = document.getElementById('location').value.toLowerCase();
+            var type = document.getElementById('type').value;
+            var minPrice = parseInt(document.getElementById('min-price').value) || 0;
+            var maxPrice = parseInt(document.getElementById('max-price').value) || Infinity;
+
+            var filteredProperties = properties.filter(function(property) {
+                var matchesLocation = location ? property.location.toLowerCase().includes(location) : true;
+                var matchesType = type === 'any' || property.type === type;
+                var matchesPrice = property.price >= minPrice && property.price <= maxPrice;
+
+                return matchesLocation && matchesType && matchesPrice;
+            });
+
+            if (filteredProperties.length > 0) {
+                displayProperties(filteredProperties);
+                displayPropertyList(filteredProperties);
+            } else {
+                alert("No properties found matching your criteria.");
+            }
+        });
+
+        function displayPropertyList(filteredProperties) {
+            var propertyResults = document.getElementById('property-results');
+            propertyResults.innerHTML = '';
+
+            filteredProperties.forEach(function(property) {
+                var propertyItem = document.createElement('div');
+                propertyItem.className = 'property-item';
+                propertyItem.innerHTML = `
+                    <h4>${property.location}</h4>
+                    <p><i>Type: ${property.type}</i></p>
+                    <p><strong>Price: $${property.price}</strong></p>
+                    <img src="${property.image}" alt="Image of ${property.location}" style="width: 100%; height: auto;">
+                    <p>${property.description}</p>
+                `;
+                propertyResults.appendChild(propertyItem);
+            });
+        }
+
+        displayProperties(properties);
+    </script>
+</body>
+</html>

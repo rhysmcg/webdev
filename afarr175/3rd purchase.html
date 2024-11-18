@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout</title>
+<style>
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  /* Main Container */
+  .cart-container {
+    display: flex;
+    width: 90%;
+    max-width: 1400px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  /* Left Section */
+  .cart-items {
+    flex: 2;
+    margin-right: 20px;
+  }
+
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .cart-header h2 {
+    font-size: 24px;
+  }
+
+  .cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+
+  .item-image img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .item-details {
+    margin-left: 15px;
+    flex: 1;
+  }
+
+  .item-title {
+    font-weight: bold;
+  }
+
+  .item-info {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+
+  .item-price {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .item-quantity {
+    margin-left: 15px;
+  }
+
+  .item-actions {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    color: #007BFF;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+
+  /* Right Section */
+  .summary {
+    flex: 1;
+    padding-left: 20px;
+  }
+
+  .summary-info {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .afterpay {
+    font-size: 12px;
+    color: #007BFF;
+    margin-bottom: 20px;
+  }
+
+  .free-shipping {
+    font-size: 12px;
+    color: red;
+    margin-bottom: 20px;
+  }
+
+  .checkout-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FFD700;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .return-home {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #2ecc71;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .return-home:hover {
+            background-color: #27ae60;
+        }
+</style>
+</head>
+<body>
+
+<div class="cart-container">
+  <!-- Left: Cart Items -->
+  <div class="cart-items">
+    <div class="cart-header">
+      <h2>My Cart</h2>
+    </div>
+
+    <!-- Item 1 -->
+    <div class="cart-item" id="item-1">
+      <div class="item-image">
+        <img src="c:\Users\Fazta\Downloads\piano.jpg" alt="Item Image">
+      </div>
+      <div class="item-details">
+        <div class="item-title">Valencia VC103 3/4 Size Classical Guitar</div>
+        <div class="item-info">In Stock</div>
+      </div>
+      <div class="item-price">Price: $109.00</div>
+      <div class="item-quantity">
+        <select>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </div>
+      <div class="item-actions">
+        <span onclick="removeItem('item-1')">Remove</span> | 
+      </div>
+    </div>
+
+    <div class="cart-footer">
+      <p>1 Items</p>
+    </div>
+  </div>
+
+  <!-- Right: Summary -->
+  <div class="summary">
+    <div class="promo-code">
+      <input type="text" placeholder="Promo Code">
+      <button>Submit</button>
+    </div>
+
+    <div class="summary-info">
+      <p>Shipping Cost: <span>TBD</span></p>
+      <p>Discount: <span>-$0</span></p>
+      <p>Tax: <span>TBD</span></p>
+    </div>
+
+    <div class="total">
+      Estimated Total: $109.00
+    </div>
+
+    <div class="afterpay">
+      or 4 interest-free payments of $10.00 with Afterpay
+    </div>
+
+        <!-- Return Home Button -->
+        <a href="assignment term -4 website.html" class="return-home">Return Home</a>
+    </div>
+
+    <a href="purchasecomplete.html">
+    <button class="checkout-button">Checkout</button>
+  </div>
+</div>
+</a>
+
+
+<script>
+  // JavaScript function to remove items
+  function removeItem(itemId) {
+    const item = document.getElementById(itemId);
+    item.remove();
+    // Update cart footer (you may want to add logic here to update item count and total)
+    document.querySelector('.cart-footer').innerHTML = '<p>0 Items</p>';
+    document.querySelector('.total').innerText = 'Estimated Total: $0.00';
+  }
+</script>
+
+</body>
+</html>

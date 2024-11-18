@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Cityscape Realty</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Cityscape Realty</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-form-container">
+            <h2>Contact Us</h2>
+            <form id="contactForm" method="POST" action="#">
+                <!-- Email Input -->
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Your email (e.g. example@domain.com)">
+
+                <!-- Message Textbox -->
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Write your message here..."></textarea>
+
+                <!-- Review Section (Star Rating) -->
+                <label for="rating">Rate Your Experience:</label>
+                <div class="star-rating">
+                    <!-- Flipped the order of the radio buttons and labels -->
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1" class="star">&#9733;</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2" class="star">&#9733;</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3" class="star">&#9733;</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4" class="star">&#9733;</label>
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5" class="star">&#9733;</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cityscape Realty | All rights reserved</p>
+        <p><a href="mailto:cityscaperealty@yahoo.com">Contact Us</a></p>
+    </footer>
+
+</body>
+</html>

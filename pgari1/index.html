@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brisbane Fit Hub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* General styling */
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Raleway", sans-serif;
+            color: white;
+        }
+        body, html {
+            height: 100%;
+            line-height: 1.8;
+            background-color: #333; /* Dark background color */
+        }
+
+        /* Background image for header */
+        .bgimg-1 {
+            background-position: center;
+            background-size: cover;
+            background-image: url("gym-bg.jpg"); /* Replace with an actual gym background image */
+            min-height: 100%;
+        }
+
+        /* Navbar styling */
+        #myNavbar {
+            background-color: #222; /* Slightly darker navbar */
+        }
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
+
+        /* Membership and booking table styling */
+        .membership-table, .booking-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .membership-table th, .membership-table td, .booking-table th, .booking-table td {
+            border: 1px solid #555;
+            padding: 12px;
+            text-align: center;
+        }
+        .membership-table th, .booking-table th {
+            background-color: #444;
+            color: white;
+        }
+        .membership-table td, .booking-table td {
+            background-color: #666;
+            color: white;
+        }
+
+        /* Trainer section styling */
+        .trainer-bio {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .trainer-bio img {
+            border-radius: 50%;
+            margin-right: 20px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar with logo -->
+<div class="w3-top">
+    <div class="w3-bar w3-card" id="myNavbar">
+        <a href="#home" class="w3-bar-item w3-button w3-wide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNP8hVL7CffqyOvFCadqmbCisZuqNHpro_QQ&s" alt="Brisbane Fit Hub Logo" style="height: 30px; vertical-align: middle;"> BRISBANE FIT HUB
+        </a>
+        <div class="w3-right w3-hide-small">
+            <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+            <a href="#services" class="w3-bar-item w3-button">SERVICES</a>
+            <a href="#trainers" class="w3-bar-item w3-button">TRAINERS</a>
+            <a href="#membership" class="w3-bar-item w3-button">MEMBERSHIP</a>
+            <a href="#booking" class="w3-bar-item w3-button">BOOKING</a>
+            <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+        </div>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Sidebar for small screens -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">CLOSE ×</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+    <a href="#trainers" onclick="w3_close()" class="w3-bar-item w3-button">TRAINERS</a>
+    <a href="#membership" onclick="w3_close()" class="w3-bar-item w3-button">MEMBERSHIP</a>
+    <a href="#booking" onclick="w3_close()" class="w3-bar-item w3-button">BOOKING</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with background image -->
+<header class="bgimg-1 w3-display-container" id="home">
+    <div class="w3-display-middle w3-text-white w3-center">
+        <h1 class="w3-jumbo">Welcome to Brisbane Fit Hub</h1>
+        <p>Your fitness journey starts here</p>
+    </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container w3-padding-64" id="about">
+    <h2>About Us</h2>
+    <p>Brisbane Fit Hub is a community-focused gym designed to empower every individual on their fitness journey. **About Us – Brisbane Fit Hub**
+
+        Welcome to **Brisbane Fit Hub**, where your fitness journey meets innovation, community, and results. Located in the heart of Brisbane, our gym is more than just a place to work out – it’s a space where you can transform your body, mind, and lifestyle. Whether you're a seasoned athlete or just starting your fitness journey, we provide everything you need to achieve your personal goals in an environment that motivates, inspires, and supports you every step of the way.
+        
+        **Our Mission**
+        
+        At Brisbane Fit Hub, we’re dedicated to helping you become the best version of yourself. Our mission is simple: to empower individuals of all fitness levels to lead healthier, stronger, and more fulfilling lives. We believe fitness is not just about lifting weights or running miles – it’s about building confidence, resilience, and a sense of accomplishment that extends beyond the gym.
+        
+        **What Sets Us Apart**
+        
+        - **Expert Coaching**: Our team of certified trainers are passionate about your success. Whether you're aiming to improve strength, lose weight, enhance flexibility, or increase endurance, our coaches are here to guide you with personalized training plans and expert advice.
+          
+        - **State-of-the-Art Equipment**: Our gym is equipped with the latest fitness technology and top-quality gear to ensure you get the most out of every session. From cardio machines to free weights, everything is designed to help you perform at your best.
+        
+        - **Inclusive Community**: At Brisbane Fit Hub, we’re more than just a gym – we’re a community. Our members come from all walks of life, united by a shared commitment to health and fitness. We celebrate each other's progress and lift each other up, making every achievement feel like a team success.
+        
+        - **Variety of Classes**: No matter your fitness level or preference, we offer a wide range of group classes that cater to all types of workouts. From high-intensity interval training (HIIT) and strength training to yoga and mindfulness sessions, there's something for everyone.
+        
+        - **Flexible Memberships**: We offer flexible membership options to suit your needs, whether you’re looking for a short-term commitment or long-term membership. No matter your schedule, we have a plan that works for you.
+        
+        **Join Us at Brisbane Fit Hub**
+        
+        Ready to take your fitness to the next level? Join the Brisbane Fit Hub family today, and experience a gym that’s as committed to your success as you are. Whether you're here to train, to connect, or simply to have fun while getting fit, we're excited to be part of your journey.
+        
+        **Brisbane Fit Hub** – Where Fitness Meets Community.</p>
+</div>
+
+<!-- Services Section -->
+<div class="w3-container w3-padding-64" id="services">
+    <h2>Our Services</h2>
+    <p>Explore our range of services, from personal training to group classes.</p>
+    <img src= "https://www.fitnesscartel.com.au/application/files/9616/5164/5580/Oxley-Club-Page.jpg">
+    <img src="https://www.fitnesscartel.com.au/application/files/4717/1748/1571/Untitled_design_51.png"
+</div>
+<!-- Trainers Section -->
+<div class="w3-container w3-padding-64" id="trainers">
+    <h2>Meet Our Trainers</h2>
+   
+    <!-- Trainer 1 -->
+    <div class="trainer-bio">
+        <img src="https://www.fitnesscartel.com.au/application/files/9017/0772/8163/Paul_Lee_PT_Profile_Pic.png" alt="Trainer 1 Photo"> <!-- Add image path here -->
+        <div>
+            <h3>Justin Williams</h3>
+            <p>Justin is a certified personal trainer with over 10 years of experience in weight training and nutrition. He specializes in strength and endurance programs to help clients achieve peak performance.</p>
+        </div>
+    </div>
+
+    <!-- Trainer 2 -->
+    <div class="trainer-bio">
+        <img src="https://www.fitnesscartel.com.au/application/files/cache/thumbnails/a63f7c58a229b93b0ff89b88684841c9.jpg" alt="Trainer 2 Photo"> <!-- Add image path here -->
+        <div>
+            <h3>Mike Brown</h3>
+            <p>Mike is an expert in high-intensity interval training (HIIT) and bodyweight exercises. With a background in sports science, he designs dynamic workouts that improve agility and strength.</p>
+        </div>
+    </div>
+
+    <!-- Trainer 3 -->
+    <div class="trainer-bio">
+        <img src="https://www.fitnesscartel.com.au/application/files/6916/9165/4510/Sonja_PT_Profile_Pic_Nundah.png" alt="Trainer 3 Photo"> <!-- Add image path here -->
+        <div>
+            <h3>Jessica Lee</h3>
+            <p>Jessica brings a holistic approach to fitness, combining yoga, pilates, and mindfulness training. Her goal is to help clients build flexibility, balance, and inner strength.</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Membership Section -->
+<!-- Pricing Section -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
+    <h3>PRICING</h3>
+    <p class="w3-large">Choose a pricing plan that fits your needs.</p>
+    <div class="w3-row-padding" style="margin-top:64px">
+      <div class="w3-third w3-section">
+        <ul class="w3-ul w3-white w3-hover-shadow">
+          <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16"><b></b> Shared locker</li>
+          <li class="w3-padding-16"><b></b> Selected gym tag</li>
+          <li class="w3-padding-16">
+            <h2 class="w3-wide">$ 10</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+      <div class="w3-third">
+        <ul class="w3-ul w3-white w3-hover-shadow">
+          <li class="w3-red w3-xlarge w3-padding-48">Pro</li>
+          <li class="w3-padding-16"><b></b> Personal locker</li>
+          <li class="w3-padding-16"><b></b> All around gym tag</li>
+          <li class="w3-padding-16"><b></b> Pool</li>
+          <li class="w3-padding-16">
+            <h2 class="w3-wide">$ 25</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+      <div class="w3-third w3-section">
+        <ul class="w3-ul w3-white w3-hover-shadow">
+          <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
+          <li class="w3-padding-16"><b></b> Pool/Sauna</li>
+          <li class="w3-padding-16"><b></b>Personal locker</li>
+          <li class="w3-padding-16"><b></b> All around gym tag</li>
+          <li class="w3-padding-16">
+            <h2 class="w3-wide">$ 50</h2>
+            <span class="w3-opacity">per month</span>
+          </li></li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+          </div>
+  
+
+<!-- Booking Section -->
+<div class="w3-container w3-padding-64" id="booking">
+    <h2>Booking Roster</h2>
+    <table class="booking-table">
+        <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <td>6:00 AM</td>
+            <td>Yoga</td>
+            <td>Spin Class</td>
+            <td>Strength Training</td>
+            <td>Yoga</td>
+            <td>Spin Class</td>
+        </tr>
+        <tr>
+            <td>9:00 AM</td>
+            <td>HIIT</td>
+            <td>Strength Training</td>
+            <td>Yoga</td>
+            <td>HIIT</td>
+            <td>Strength Training</td>
+        </tr>
+        <tr>
+            <td>5:00 PM</td>
+            <td>Spin Class</td>
+            <td>Yoga</td>
+            <td>HIIT
+</div>
+ <!-- Contact Section -->
+<div class="w3-container w3-padding-64" id="contact">
+    <h2>Contact Us</h2>
+    <p>Reach out to us to start your fitness journey or for any inquiries.</p>
+    <p><i class="fa fa-map-marker"></i> Brisbane, Australia</p>
+    <p><i class="fa fa-phone"></i> +61 421 367 492</p>
+    <p><i class="fa fa-envelope"></i> brisbanefithub@gmail.com</p>
+</div>

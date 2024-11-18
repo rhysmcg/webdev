@@ -1,0 +1,409 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Harris Luxury Car Rentals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+      
+        header {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 36px;
+            color: #f8c630;
+            margin: 0;
+        }
+
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #f8c630;
+            font-size: 18px;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #f1f1f1;
+        }
+
+        
+        .brand-filter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: #fff;
+            margin-top: 10px;
+        }
+
+        .brand-filter img {
+            width: 50px;
+            margin: 0 15px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .brand-filter img:hover {
+            transform: scale(1.1);
+        }
+
+        
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .car-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .car-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 30%;
+            text-align: center;
+        }
+
+        .car-card img {
+            width: 100%;
+            height: 235PX;
+        }
+
+        .car-details {
+            padding: 20px;
+        }
+
+        .car-name {
+            font-size: 24px;
+            color: #111;
+            margin: 10px 0;
+        }
+
+        .car-description {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .price {
+            font-size: 18px;
+            color: #f8c630;
+            margin: 10px 0;
+        }
+
+       
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .button {
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .call-button {
+            background-color: #f8c630;
+        }
+
+        .call-button:hover {
+            background-color: #f8c630;
+        }
+
+        .whatsapp-button {
+            background-color: #f8c630;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #f8c630;
+        }
+
+        .book-button {
+            background-color: #f8c630;
+        }
+
+        .book-button:hover {
+            background-color: #d4a017;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tom Harris Luxury Car Rentals</h1>
+</header>
+
+<div class="navbar">
+    <a href="mainpage.html" class="home-button">Home</a>
+
+    <a href="about.html" class="About us-button">about us</a>
+    <a href="book.html" class="book-button">Book</a>
+</div>
+
+<div class="brand-filter">
+    <img src="static/image/lambo.png" alt="Lamborghini" onclick="filterByBrand('Lamborghini')">
+    <img src="static/image/posrche.png" alt="porsche" onclick="filterByBrand('Porsche')">
+    <img src="static/image/mclaren.png" alt="McLaren" onclick="filterByBrand('Mclaren')">
+    <img src="static/image/merc.png" alt="Mercedes" onclick="filterByBrand('Mercedes')">
+    <img src="static/image/koenigsegg.png" alt="koenigsegg" onclick="filterByBrand('Koenigsegg')">
+</div>
+
+<div class="container">
+    <div class="car-grid" id="carGrid">
+      
+        <div class="car-card" data-brand="Porsche">
+            <img src="static/image/gt2rs.jpg" alt="Porsche">
+            <div class="car-details">
+                <div class="car-name">Porsche GT2RS</div>
+                <p class="car-description">A high-performance track car known for its powerful twin turbocharged flat 6 engine that dominates on the track.</p>
+                <div class="price">$1500 / Day</div>
+                <div class="buttons">
+                    <a href="tel:+0493102309" class="button call-button">Call</a>
+                    <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+                    <a href="book.html" class="button book-button">Book</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="car-card" data-brand="Porsche">
+            <img src="static/image/rwb.jpg" alt="Porsche">
+            <div class="car-details">
+                <div class="car-name">Porsche 993 911 RWB</div>
+                <p class="car-description">The RWB 993 Porsche is a unique, wide-bodied Porsche 911, the RWB 993 combines raw performance with a unique aesthetic.</p>
+                <div class="price">$700 / Day</div>
+                <div class="buttons">
+                    <a href="tel:+1234567890" class="button call-button">Call</a>
+                    <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+                    <a href="book.html" class="button book-button">Book</a>
+                </div>
+            </div>
+        </div>
+        <div class="car-card" data-brand="Porsche">
+          <img src="static/image/mirage.jpg" alt="Porsche">
+          <div class="car-details">
+              <div class="car-name">Porsche Mirage GT</div>
+              <p class="car-description">The Mirage GT(Carrera GT) is a limited edition series of the legendary Carrera GT, The Mirage GT comes packed with a 5.7L naturually aspirated V10, this one of a kind vehicle is truly a car enthusiasts dream.</p>
+              <div class="price">$10000 / Day</div>
+              <div class="buttons">
+                  <a href="tel:+1234567890" class="button call-button">Call</a>
+                  <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+                  <a href="book.html" class="button book-button">Book</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="car-card" data-brand="Koenigsegg">
+        <img src="static/image/gemera.jpg" alt="Koenigsegg">
+        <div class="car-details">
+            <div class="car-name">Koenigsegg Gemera</div>
+            <p class="car-description">The ultimate family car, packed with a 5L twin turbo V8 suitable for both daily drives and special occasions.</p>
+            <div class="price">$25000 / Day</div>
+            <div class="buttons">
+                <a href="tel:+1234567890" class="button call-button">Call</a>
+                <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+                <a href="book.html" class="button book-button">Book</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="car-card" data-brand="Koenigsegg">
+      <img src="static/image/jeskoab.jpg" alt="Koenigsegg Gemera">
+      <div class="car-details">
+          <div class="car-name">Koenigsegg Jesko Absolut</div>
+          <p class="car-description">Just as powerful as its track focused sibling, the Jesko Absolut is powered by a twin turbo V8 making it the ultimate car to bring onto the track.</p>
+          <div class="price">$30000 / Day</div>
+          <div class="buttons">
+              <a href="tel:+1234567890" class="button call-button">Call</a>
+              <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+              <a href="book.html" class="button book-button">Book</a>
+          </div>
+      </div>
+  </div>
+
+  <div class="car-card" data-brand="Koenigsegg">
+    <img src="static/image/reg.jpg" alt="Koenigsegg Regera">
+    <div class="car-details">
+        <div class="car-name">Koenigsegg Regera</div>
+        <p class="car-description">If you are looking for true speed, the Regera is the perfect fit for you, inside the Regera comes with a hyrbid engine with the powerhouse twin turbo charged v8 with 3 electric motors, if you are looking for pure entertainment and real speed, the Regera is waiting to be booked.</p>
+        <div class="price">$127000 / Day</div>
+        <div class="buttons">
+            <a href="tel:+1234567890" class="button call-button">Call</a>
+            <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+            <a href="book.html" class="button book-button">Book</a>
+        </div>
+    </div>
+</div>
+<div class="car-card" data-brand="Mclaren">
+  <img src="static/image/senna.jpg" alt="Mclaren">
+  <div class="car-details">
+      <div class="car-name">Mclaren Senna</div>
+      <p class="car-description">Inspired by Mclaren's greatest f1 driver, the Senna is the fasest Hypercar from the Mclaren line, the mid engine car is one of the most sought after hypercars made purely track focused.</p>
+      <div class="price">$82000 / Day</div>
+      <div class="buttons">
+          <a href="tel:+1234567890" class="button call-button">Call</a>
+          <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+          <a href="book.html" class="button book-button">Book</a>
+      </div>
+  </div>
+</div>
+<div class="car-card" data-brand="Mclaren">
+  <img src="static/image/f1.jpg" alt="Mclaren">
+  <div class="car-details">
+      <div class="car-name">Mclaren F1</div>
+      <p class="car-description">The Mclaren F1 is powered by the famous BMW S70/2 V12 engine, the F1 comes screaming down any road that it is driven on thanks to the power of the V12 engine, this vehicle is truly a one of a kind having limited production and being rarely driven due to its rarity and value.</p>
+      <div class="price">$142000 / Day</div>
+      <div class="buttons">
+          <a href="tel:+1234567890" class="button call-button">Call</a>
+          <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+          <a href="book.html" class="button book-button">Book</a>
+      </div>
+  </div>
+</div>
+<div class="car-card" data-brand="Mclaren">
+  <img src="static/image/765.jpg" alt="Mclaren">
+  <div class="car-details">
+      <div class="car-name">Mclaren 765LT Exposed Carbon Version</div>
+      <p class="car-description">The 765LT is a special car due to every part of the car being covered in carbon fibre, due to its full body of carbon fibre, the cars weight reduces letting the car accerelate faster than a base 765LT.</p>
+      <div class="price">$24000 / Day</div>
+      <div class="buttons">
+          <a href="tel:+1234567890" class="button call-button">Call</a>
+          <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+          <a href="book.html" class="button book-button">Book</a>
+      </div>
+  </div>
+</div>
+<div class="car-card" data-brand="Lamborghini">
+  <img src="static/image/mansory urus.jpg" alt="Lamborghini">
+  <div class="car-details">
+      <div class="car-name">Lamborghini Mansory Urus Venatus</div>
+      <p class="car-description">The perfect car that provibes luxury as well as performance,The Mansory Urus comes packed with a 4L twin turbo V8, and due to the car being a mansory package the stock 641hp is boosted to 900hp.</p>
+      <div class="price">$15000 / Day</div>
+      <div class="buttons">
+          <a href="tel:+1234567890" class="button call-button">Call</a>
+          <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+          <a href="book.html" class="button book-button">Book</a>
+      </div>
+  </div>
+</div>
+<div class="car-card" data-brand="Lamborghini">
+  <img src="static/image/svj.jpg" alt="Lamborghini">
+  <div class="car-details">
+      <div class="car-name">Lamborghini Aventador SVJ roadster</div>
+      <p class="car-description">With a super veloce name the Lamborghini Aventador SVJ Roadster is a powerhouse, the car comes packed with a naturally aspirated v12 but here at Tom Harris, due to the high demands of Gintani parts, the SVJ Roadster has a Gintani exhaust installed, this vehicle will never leave you bored because of the speed, the infamous v12 scream and the flames shooting out from the exhaust,   Lamborghini doesnt disappoint.</p>
+      <div class="price">$5000 / Day</div>
+      <div class="buttons">
+          <a href="tel:+1234567890" class="button call-button">Call</a>
+          <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+          <a href="book.html" class="button book-button">Book</a>
+      </div>
+  </div>
+</div>
+<div class="car-card" data-brand="Lamborghini">
+  <img src="static/image/murci.jpg" alt="Lamborghini">
+  <div class="car-details">
+      <div class="car-name">Lamborghini Murcielago SV</div>
+      <p class="car-description">The Murcielago LP670-4 comes with a naturally aspirated v12 engine with the car being a limited edition 6 speed gated manual, everything about this car is perfection. A lot is expected and Lamborghini didnt disappoint.</p>
+      <div class="price">$65000 / Day</div>
+      <div class="buttons">
+          <a href="tel:+1234567890" class="button call-button">Call</a>
+          <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+          <a href="book.html" class="button book-button">Book</a>
+      </div>
+  </div>
+</div>
+<div class="car-card" data-brand="Mercedes">
+  <img src="static/image/amg1.jpg" alt="Mercedes">
+  <div class="car-details">
+      <div class="car-name">Mercedes AMG One</div>
+      <p class="car-description">The king of Nurburging,this track monster comes packed with a 1.6L turbo V6, this vehicle dominates every other cars being the real king of the infamous track Nurburgring.</p>
+      <div class="price">$9000 / Day</div>
+      <div class="buttons">
+          <a href="tel:+1234567890" class="button call-button">Call</a>
+          <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+          <a href="book.html" class="button book-button">Book</a>
+      </div>
+  </div>
+</div>
+<div class="car-card" data-brand="Mercedes">
+  <img src="static/image/sclass.jpg" alt="Mercedes>
+  <div class="car-details">
+      <div class="car-name">Mercedes Maybach S680</div>
+      <p class="car-description">The ultimate family car, this car is pure Luxury perfect to drive around if you value luxury and comfort, this car will leave you satisfied and you'll never experience something like this.</p>
+      <div class="price">$1200 / Day</div>
+      <div class="buttons">
+          <a href="tel:+1234567890" class="button call-button">Call</a>
+          <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+          <a href="book.html" class="button book-button">Book</a>
+      </div>
+  </div>
+</div>
+
+
+        <div class="car-card" data-brand="Mercedes">
+            <img src="static/image/brabus800.jpg" alt="Mercedes">
+            <div class="car-details">
+                <div class="car-name">Brabus G63 AMG 800 Widestar</div>
+                <p class="car-description">Known for its powerful V8 and wide body, the G63 offers both luxury and speed like no other.</p>
+                <div class="price">$45000 / Day</div>
+                <div class="buttons">
+                    <a href="tel:+1234567890" class="button call-button">Call</a>
+                    <a href="https://www.instagram.com/user493102309/" class="button whatsapp-button">WhatsApp</a>
+                    <a href="book.html" class="button book-button">Book</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function filterByBrand(brand) {
+        const cars = document.querySelectorAll('.car-card');
+        cars.forEach(car => {
+            if (car.getAttribute('data-brand') === brand || brand === 'all') {
+                car.style.display = 'block';
+            } else {
+                car.style.display = 'none';
+            }
+        });
+    }
+    
+    
+</script>
+
+</body>
+</html>
+

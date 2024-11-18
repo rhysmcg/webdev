@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hamsters List</title>
+    <link rel="stylesheet" type="text/css" href="css/Assignment1.css">
+    <style>
+      .filterDiv {
+          display: none; /* Initially hide all items */
+      }
+      .show {
+          display: block; /* Show elements with the 'show' class */
+      }
+      .filterContainer {
+          margin-bottom: 20px; /* Spacing between filters */
+      }
+      .noResults {
+          display: none; /* Initially hide the no results message */
+          color: lightgreen; /* Style the message */
+          margin-top: 20px; /* Space above the message */
+      }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="Assignment1.html" class="HomeBar">Home</a></li>
+    <li><a href="WAW.html" class="HomeBar">Who Are We?</a></li>
+    <li><a href="Help.html" class="HomeBar">Need Help?</a></li>
+  </ul>
+  <div id="mySelectContainer">
+    <div class="filterContainer">
+      <label for="ageSelect">Choose Age:</label>
+      <select id="ageSelect">
+        <option value="">Select an age group</option>
+        <option value="Young">1-4 Months</option>
+        <option value="Adult">5-8 Months</option>
+        <option value="Senior">9-11 Months</option>
+        <option value="Mature">1 Year+</option>
+      </select>
+    </div>
+    
+    <div class="filterContainer">
+      <label for="weightSelect">Choose Weight:</label>
+      <select id="weightSelect">
+        <option value="">Select a weight category</option>
+        <option value="Light">Light</option>
+        <option value="Medium">Medium</option>
+        <option value="Heavy">Heavy</option>
+      </select>
+    </div>
+    
+    <div class="filterContainer">
+      <label for="speciesSelect">Choose Species:</label>
+      <select id="speciesSelect">
+        <option value="">Select a species</option>
+        <option value="Dwarf">Dwarf</option>
+        <option value="Syrian">Syrian Hamster</option>
+      </select>
+    </div>
+    
+    <div class="filterContainer">
+      <label for="defectsSelect">Defects:</label>
+      <select id="defectsSelect">
+        <option value="">Select defect status</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+    
+    <button onclick="searchSelection()">Search</button>
+  </div>
+
+  <div class="container">
+    <a href="Melon.html"><div class="filterDiv Young Light Syrian No">Melon</div></a>
+    <a href="Lemon.html"><div class="filterDiv Young Medium  Dwarf No">Lemon</div></a>
+    <a href="Kiwi.html"><div class="filterDiv Adult Heavy Dwarf No">Kiwi</div></a>
+    <a href="Banana.html"><div class="filterDiv Adult Heavy Dwarf No">Banana</div></a>
+  </div>
+
+  <div class="noResults" id="noResultsMessage">
+    The type of pet you are looking for is currently unavailable, please check back again later or subscribe to receive notifications for when your ideal pet is available.
+  </div>
+
+  <script>
+    // Show all items on page load
+    showAll();
+
+    function showAll() {
+      var elements = document.getElementsByClassName("filterDiv");
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].style.display = "block"; // Show all items
+      }
+      document.getElementById("noResultsMessage").style.display = "none"; // Hide no results message
+    }
+
+    function searchSelection() {
+      var elements = document.getElementsByClassName("filterDiv");
+      var selectedCategories = [];
+      var hasResults = false; // Flag to check if any results are found
+
+      // Collect selected options from all selects
+      var selects = document.querySelectorAll('select:not([multiple])');
+      selects.forEach(select => {
+        if (select.value) {
+          selectedCategories.push(select.value);
+        }
+      });
+
+      for (var i = 0; i < elements.length; i++) {
+        // Check if the element matches all selected categories
+        if (selectedCategories.length === 0 || selectedCategories.every(category => elements[i].classList.contains(category))) {
+          elements[i].style.display = "block"; // Show matched categories
+          hasResults = true; // Found at least one matching pet
+        } else {
+          elements[i].style.display = "none"; // Hide others
+        }
+      }
+
+      // Show or hide the no results message based on the flag
+      document.getElementById("noResultsMessage").style.display = hasResults ? "none" : "block";
+    }
+  </script>
+<img src="Screenshot 2024-10-28 143021.png"width="1515px" height="600px"margin="0px">
+<footer style="background-color: rgb(33, 33, 33); color: grey;height: 400px; text-align: center; margin: 0px">
+  <p style="font-size: 17.5px;">Furry Friends Adoption Centre acknowledges Traditional Owners of Country throughout Australia and recognises the continuing connection to lands, waters and communities.
+    We pay our respect to Aboriginal and Torres Strait Islander cultures; and to Elders past, present and emerging.</p>
+</footer>
+</body>
+</html>
