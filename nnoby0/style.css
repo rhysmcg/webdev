@@ -1,0 +1,34 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+h1{
+    text-align:center;
+}
+
+img{
+  width: 100%;
+}
+
+
+.navbar ul{
+  list-style-type: none;
+  background-color: rgb(61, 61, 61);
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+
+}
+   .navbar a{
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      padding: 15px;
+      display: block;
+      text-align: center;
+   }
+   .navbar a:hover{
+      background-color: rgb(196, 163, 111);
+   }
+   .navbar li{
+      float: left;
+   }

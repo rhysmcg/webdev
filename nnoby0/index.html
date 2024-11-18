@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Coffee Nook</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .red1{
+            background-color:beige;
+        }
+        .red2{
+            background-color: rgb(221, 195, 153);
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+        .cta {
+            font-weight: bold;
+        }
+
+        .image-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.7); 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="image-container">
+        <img src="img/img1.jpg.webp" alt="Coffee Nook Image">
+        <div class="overlay-text">Coffee Nook</div>
+    </div>
+
+    <main>
+        <h3 id="home">Coffee Nook Home Page</h3>
+        <p>Your cozy corner for the perfect cup of coffee!</p>
+        <p>At Coffee Nook, we believe every great day begins with a great cup of coffee. Welcome to your new favorite spot!</p>
+        <br>
+        <p>Step inside and let the aroma of freshly brewed coffee greet you — the perfect place to unwind, work, or connect with friends.</p>
+        <br>
+        <p>From rich espressos to creamy lattes, our handpicked beans are brewed to perfection just for you.</p>
+        <br>
+        <p>Enjoy the warmth of our inviting space, where you can sip on expertly crafted drinks and experience the art of coffee.</p>
+        <br>
+        <p class="cta">Ready to experience the best coffee in town? Stop by and taste the difference!</p>
+        <br>
+        <p>Whether you prefer a strong espresso or a smooth cappuccino, we have something for every coffee lover.</p>
+        <br>
+        <p>Our community is at the heart of everything we do. Whether you’re stopping by for a quick coffee or spending the afternoon here, we’re happy to have you!</p>
+        <br>
+        <p class="cta">Join us today and find your perfect brew. Your next great coffee experience is waiting!</p>
+    </main>
+    <br> <br> <br> <br> <br>
+</div>
+    <section id="menu">
+        <h3>Our Menu</h3>
+
+
+        
+        <div>
+            <h4>Coffee</h4>
+            <p>Espresso - $3.00</p>
+            <p>Cappuccino - $3.50</p>
+            <p>Latte - $4.00</p>
+            <p>Mocha - $4.50</p>
+        </div>
+        
+        <div>
+            <h4>Tea</h4>
+            <p>Green Tea - $2.50</p>
+            <p>Chai Latte - $3.00</p>
+            <p>Herbal Tea - $2.75</p>
+        </div>
+        
+        <div>
+            <h4>Pastries</h4>
+            <p>Croissant - $2.00</p>
+            <p>Muffin - $2.50</p>
+            <p>Scone - $2.25</p>
+        </div>
+    </section>
+<br> <br> <br> <br>
+    <section id="about">
+        <h2>About Coffee Nook</h2>
+        <br> <br>
+        <p>Welcome to Coffee Nook, your cozy corner for the perfect cup of coffee. Founded with a love for coffee and a passion for community, we set out to create a space where people can relax, connect, and enjoy exceptional coffee.</p>
+        <p>Our journey started in 2015 with a simple mission: to serve high-quality, responsibly sourced coffee in a warm and welcoming atmosphere. Since then, we have grown into a beloved spot for locals and visitors alike, becoming known for our rich brews and friendly service.</p>
+        <p>At Coffee Nook, we believe that coffee is more than just a drink—it’s an experience. We take pride in selecting the finest beans from around the world, working with local roasters to ensure every cup is brewed to perfection. From traditional espresso to innovative lattes, we craft each drink with care and expertise.</p>
+        <br> <br>
+        <h3>Our Mission</h3>
+        <p>We’re committed to creating an inclusive space that brings people together. Whether you're here for a morning pick-me-up or an afternoon study session, our goal is to make every visit special. Coffee Nook isn’t just a café—it’s a community.</p>
+        <br> <br>
+        <h3>What Makes Us Unique</h3>
+        <p>Our dedication to quality and community sets us apart. We focus on sustainable practices, sourcing our beans ethically and minimizing our environmental footprint. We’re proud to be a place where you can enjoy great coffee with a clean conscience.</p>
+        <p>Thank you for being part of our journey. We can’t wait to serve you your next favorite cup!</p>
+    </section>
+    <br> <br> <br> <br> <br> <br> <br> 
+    <div class="red1">
+    <section id="contact">
+        <h3>Contact Us</h3>
+        <p>We’d love to hear from you! Whether you have questions, feedback, or just want to say hello, reach out to us.</p>
+        <p><strong>Phone:</strong> 0492887394839</p>
+        <p><strong>Email:</strong> contact@coffeenook.com</p>
+        <p><strong>Address:</strong> 662 Compton Rd, Calamvale QLD 4116</p>
+        
+        <h4>Send Us a Message</h4>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</div>
+
+</body>
+</html>
